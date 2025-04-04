@@ -1,0 +1,215 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #8B0000; /* Deep red for luxury feel */
+    --secondary-color: #ffffff; /* Clean white */
+    --dark-color: #1a1a1a; /* Dark background for contrast */
+    --light-gray: #f5f5f5;
+    --accent-color: #E0C097; /* Elegant gold */
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 120px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+header h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* NAVIGATION */
+#menu {
+    background: var(--dark-color);
+    padding: 15px 0;
+    text-align: center;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: var(--transition);
+}
+
+#menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* CONTENT AREA */
+#conteneur {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 30px auto;
+    gap: 20px;
+}
+
+/* SIDEBAR NAVIGATION */
+nav#menu {
+    flex: 1;
+    background: var(--dark-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+nav#menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+nav#menu ul li {
+    margin: 10px 0;
+}
+
+/* ARTICLE / MAIN CONTENT */
+article {
+    flex: 3;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADINGS */
+h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* BUTTONS */
+button, .catalog-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+button:hover, .catalog-button:hover {
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid var(--light-gray);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #conteneur {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #menu ul {
+        flex-direction: column;
+    }
+
+    article {
+        padding: 20px;
+    }
+}
